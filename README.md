@@ -1,7 +1,7 @@
 # Textrank
 
 ### 사용법
-data 부분에 문장을 넣으면 textrank로 요약된 문장 추출됨
+tr.loadSents()의 data 부분에 문장을 넣으면 textrank로 요약된 문장 추출됨
 
 ``` python
 tr = TextRank()
