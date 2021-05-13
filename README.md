@@ -17,3 +17,4 @@ def summarize(self, ratio = 0.333):
         #    pass
         score = 3
 ```
+* 출처: https://bab2min.tistory.com/570
