@@ -1,5 +1,18 @@
 # Textrank
 
+### 사용법
+data 부분에 문장을 넣으면 textrank로 요약된 문장 추출됨
+
+``` python
+tr = TextRank()
+tagger = Mecab()
+stopword = set([('있', 'VV'), ('하', 'VV'), ('되', 'VV') ])
+tr.loadSents(data, lambda sent: filter(lambda x:x not in stopword and x[1] in ('NNG', 'NNP', 'VV', 'VA'), tagger.pos(sent)))
+tr.build()
+ranks = tr.rank()
+tr.summarize(0.2)
+```
+
 아직까지 문장이 길고 전처리 완전하게 되지 않아 아래 부분이 잘 계산되지 않음  
 현재느 score = 3으로 고정해두었는데 이후에는 이 부분 수정해가면서 봐도 좋을 것 같음
 ``` python
@@ -17,4 +30,5 @@ def summarize(self, ratio = 0.333):
         #    pass
         score = 3
 ```
+
 * 출처: https://bab2min.tistory.com/570
