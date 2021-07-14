@@ -1,7 +1,8 @@
 # Textrank
 
 ### 사용법
-tr.loadSents()의 data 부분에 문장을 넣으면 `ratio`만큼 textrank로 요약된 문장 추출됨
+* data: 문장 분리된 리스트 
+* tr.loadSents()의 data 부분에 문장을 넣으면 `ratio`만큼 textrank로 요약된 문장 추출됨
 
 ``` python
 tr = TextRank()
